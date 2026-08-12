@@ -1,19 +1,19 @@
 namespace TwitterClone.Domain.Entities;
 
-public class Like: BaseEntity
+public class Bookmark: BaseEntity
 {
     private Guid _userId;
     private Guid _tweetId;
 
-    public Like() : base(Guid.NewGuid())
+    public Bookmark() : base(Guid.NewGuid())
     {
         
     }
 
     public Guid UserId
     {
-        get { return _userId; }
-        set { _userId = value; }
+        get => _userId;
+        set => _userId = value;
     }
 
     public Guid TweetId
@@ -21,6 +21,7 @@ public class Like: BaseEntity
         get => _tweetId;
         set => _tweetId = value;
     }
+    
     public override string DescribeRecord()
     {
         var baseRecord = base.DescribeRecord();

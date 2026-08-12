@@ -1,16 +1,15 @@
 namespace TwitterClone.Domain.Entities;
 
-public class User
+public class User: BaseEntity
 {
-    private Guid _id;
     private string _username;
     private string _firstName;
     private string _lastName;
     private string _email;
 
-    public Guid Id
+    public User() : base(Guid.NewGuid())
     {
-        get { return _id; }
+        
     }
     public string Username
     {
@@ -31,5 +30,11 @@ public class User
     {
         get { return _email; }
         set { _email = value; }
+    }
+    
+    public override string DescribeRecord()
+    {
+        var baseRecord = base.DescribeRecord();
+        return $"{baseRecord}, FirstName: {FirstName}, LastName: {LastName}, Email: {Email}";
     }
 }
