@@ -18,4 +18,9 @@ public class FriendRequestNotification: Notification
         var baseRecord = base.DescribeRecord();
         return $"{baseRecord}, RequestedByUserId: {RequestedByUserId}";
     }
+
+    public override string GetMessage()
+    {
+        return $"User with ID {RequestedByUserId} sent you a friend request.";
+    }
 }

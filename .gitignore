@@ -1,6 +1,5 @@
 TwitterClone/.DS_Store
-TwitterClone/TwitterClone.Domain/.DS_Store
-
 TwitterClone/.idea/*
+TwitterClone/TwitterClone.Domain/.DS_Store
 TwitterClone/TwitterClone.Domain/obj/*
 TwitterClone/TwitterClone.Domain/bin/*
